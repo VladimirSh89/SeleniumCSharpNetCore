@@ -10,3 +10,7 @@ SeleniumCSharpProject/obj/project.nuget.cache
 SeleniumCSharpProject/obj/project.nuget.cache
 SeleniumCSharpProject/obj/project.nuget.cache
 SeleniumCSharpProject/obj/Debug/net5.0/SeleniumCSharpProject.GeneratedMSBuildEditorConfig.editorconfig
+.vs/SeleniumCSharpProject/v17/.suo
+/.vs/SeleniumCSharpProject/DesignTimeBuild
+/SeleniumCSharpProject/obj/Debug/net5.0
+/SeleniumCSharpProject/bin/Debug/net5.0
