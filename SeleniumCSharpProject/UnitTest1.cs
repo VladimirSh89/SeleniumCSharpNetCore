@@ -1,6 +1,8 @@
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 using SeleniumCSharpProject.Pages;
+using WebDriverManager;
+using WebDriverManager.DriverConfigs.Impl;
 
 namespace SeleniumCSharpProject
 {
@@ -9,7 +11,12 @@ namespace SeleniumCSharpProject
         [SetUp]
         public void Setup()
         {
-            Driver = new ChromeDriver(@"C:\driver\");
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized");
+            options.AddArguments("--disable-gpu");
+
+            new DriverManager().SetUpDriver(new ChromeConfig());
+            Driver = new ChromeDriver(@"C:\driver\", options);
         }
 
         [Test]
@@ -23,7 +30,6 @@ namespace SeleniumCSharpProject
         [Test]
         public void LoginTest()
         {
-            Driver.Navigate().GoToUrl("http://eaapp.somee.com/");
 
             HomePage homePage = new HomePage();
             LoginPage loginPage = new LoginPage();
