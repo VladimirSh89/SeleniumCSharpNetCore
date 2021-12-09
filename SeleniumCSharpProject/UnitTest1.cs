@@ -23,21 +23,21 @@ namespace SeleniumCSharpProject
         public void Test1()
         {
             Driver.Navigate().GoToUrl("https://demowf.aspnetawesome.com/");
-            CustomControl.ComboBox("ContentPlaceHolder1_AllMealsCombo", "Almond");
+            //CustomControl.ComboBox("ContentPlaceHolder1_AllMealsCombo", "Almond");
             Assert.Pass();
         }
 
-        [Test]
-        public void LoginTest()
-        {
+        //[Test]
+        //public void LoginTest()
+        //{
 
-            HomePage homePage = new HomePage();
-            LoginPage loginPage = new LoginPage();
+        //    HomePage homePage = new HomePage();
+        //    LoginPage loginPage = new LoginPage();
 
-            homePage.ClickLogin();
-            loginPage.EnterUserNameAndPassword("admin", "password");
-            loginPage.ClickLogin();
-            Assert.That(homePage.IsLogOffExist, Is.True, "Log off button did not displayed");
-        }
+        //    homePage.ClickLogin();
+        //    loginPage.EnterUserNameAndPassword("admin", "password");
+        //    loginPage.ClickLogin();
+        //    Assert.That(homePage.IsLogOffExist, Is.True, "Log off button did not displayed");
+        //}
     }
 }
